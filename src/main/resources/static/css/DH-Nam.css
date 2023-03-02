@@ -1,0 +1,648 @@
+/*Header start*/
+/* end */
+/* Thêm font chữ ngoài cho trang */
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/* trang trí cho slogan */
+p{
+    margin-bottom: 0;
+}
+#slogan
+{   
+    
+    width:100%;
+    height:60px;
+    background-color:black;
+    color:#FFFFFF;
+    line-height:60px;
+}
+@media screen and (max-width:768px) {
+    #slogan
+        {              
+            width:100%;
+            height:auto;
+            background-color:black;
+            color:#FFFFFF;
+        };
+    
+ }
+
+/* end */
+/* css cho Number-Product */
+#Number-Product
+{   
+    width:100%;
+    height:70px;
+    background-color:rgb(201, 197, 197);
+    color:black;
+    line-height:70px;
+    border:1px solid rgb(192, 189, 189);
+    padding-left: 8.9%;
+}
+
+/* css cho Filter */
+#Filter
+{   
+    height:70px;
+    color:black;
+    line-height:70px;
+
+}
+/* Css cho bộ chọn trong filters */
+#Bo-Chon
+{
+    width: 35%;
+    margin-left:auto;
+    margin-right:auto;
+    height:70px;
+    border-left:1px solid gray;
+    text-align: center;
+    border-right:1px solid gray;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px){
+    #Bo-Chon
+    {
+        width: 80%;
+        margin-left:auto;
+        margin-right:0;
+        height:70px;
+        border-left:1px solid gray;
+        text-align: center;
+        border-right:1px solid gray;
+        cursor: pointer;
+    }
+
+}
+.Bo-Chon-responsive
+{
+    border-bottom:3px solid gray;
+}
+.text-responsive{
+    font-size:1.2vw;
+}
+.NewInfoInputElement{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+/* Chia cột cho các bộ chọn trong filter*/
+@media screen and (max-width: 768px){
+    #FILTERS{
+        visibility: hidden;
+        font-size:2vw;
+    }
+    .text-responsive{
+        font-size:2vw;
+    }
+    h3{
+        font-size:3vw;
+        font-weight:700;
+    }
+    h4{
+        font-size:2.5vw;
+        font-weight:600;
+    }
+    h2{
+        font-size:3.5vw;
+        font-weight:800;
+    }
+
+}
+
+#Filter-row
+{
+    width:100%;
+    overflow:auto;
+}
+#Filter-col1
+{
+    width:15%;
+    float:left;
+    
+}
+#Filter-col1 label
+{
+    margin-left: 60%;
+    
+}
+#Filter-col2
+{
+    width:30%;
+    float:left;
+}
+#Filter-col3
+{
+    width:55%;
+    float:left;
+    font-weight: 700;
+}
+/* css cho vị trí của bộ chọn filter trong trang*/
+#Div-BoChon
+{
+    position: absolute;
+    width:100%;
+    height:500px;
+    background-color: white;
+    top:0;
+    z-index:2;
+    display: none;
+    border:1px solid rgb(192, 189, 189);
+
+}
+/* css cho vị trí thông tin sản phẩm trong trang*/
+#Div-SanPham
+{
+    background-color:white;
+    height:auto;
+    position:relative;
+    top:0;
+    padding-top:50px;
+    z-index:1;
+}
+/* khi người dùng chọn bộ chọn filter thì thông tin sản phẩm sẽ mờ*/
+.Div-BoChon-responsive
+{
+    opacity: 0.3;
+}
+#label-sort{
+    width:40%;
+    margin-left:auto;
+    margin-right:0;
+}
+/* tạo bộ chọn select từ thẻ ul và li*/
+.list-unstyled { 
+    height: 30px;
+    width: 100%;
+    list-style-type: none;
+    display:inline-block;
+    background-color: white;
+    }
+.list-unstyled li
+{
+    width: 100%;
+    z-index:3;
+    position: relative;
+    border:1px;
+    cursor: pointer;  
+    margin-top:-1px;
+}
+.list-unstyled li:not(.init) 
+{   
+
+    width: 100%;
+    height:40px;
+    display: none;
+    background: #ddd;
+    line-height:40px;
+}
+.list-unstyled li:not(.init):hover
+{
+    background-color:rgb(157, 157, 161);
+} 
+.list-unstyled li.selected:not(.init):after
+{
+    font-family: 'FontAwesome';
+    content:"\f00c";
+    padding-left:20px;
+    font-size:20px;
+}
+.list-unstyled li.init:after
+{
+    cursor: pointer;
+    border:0px;
+    font-family: 'FontAwesome';
+    content:"\f0d7";
+    font-size:25px;
+    padding-left:5px;
+}
+    /*end!!!*/
+
+    /* Css cho bottom xem thêm sản phẩm*/
+    #buton-Xemthem
+    {
+        margin:30px;
+    }
+
+    /* css cho button show filter*/
+    #show
+    {
+        width:250px;
+        height:40px;
+        cursor: pointer;
+        font-weight: 700;
+        border:none;
+    }
+    #show:active
+    {
+        background-color:rgb(134, 132, 132);
+        color:white;
+    }
+    #show:focus
+    {
+        outline: 0;     
+        outline-style: none;     
+        outline-width: 0;
+    }
+
+    #show::after
+    {
+        
+        border:none;
+        font-family: 'FontAwesome';
+        content:"\f0d7";
+        font-size:25px;
+        padding-left:5px;
+    }
+    /*end!!!*/
+    @media screen and (max-width: 768px){
+        #Div-BoChon
+        {
+            position: absolute;
+            width:100%;
+            height:70vw;
+            background-color: white;
+            top:0;
+            z-index:2;
+            display: none;
+            border:1px solid rgb(192, 189, 189);
+
+        }
+        #buton-Xemthem
+    {
+        margin:20px;
+    }
+
+    /* css cho button show filter*/
+    #show
+    {
+        width:50%;
+        height:auto;
+        padding-top:5px;
+        padding-bottom:5px;
+        cursor: pointer;
+        font-weight: 700;
+        border:none;
+    }
+    }
+
+    /* Css cho các bộ chọn trong filer */
+    #BoChon-Row1
+    {
+        overflow:auto;
+        width:100%;
+        height:92%;
+    }
+    #BoChon-Row2
+    {
+        border-top:1px solid  rgb(192, 189, 189);
+        height:8%;
+        width:100%;
+        padding:7px;
+    }
+    #BoChon-Row1 #BoChon-Col1
+    {  
+        float:left;
+        width:28%;
+        border-right:1px solid  rgb(192, 189, 189);
+        height:100%;
+        padding:15px;
+    }
+    #BoChon-Row1 #BoChon-Col1 table
+    {
+        width:60%;
+    }
+    #BoChon-Row1 #BoChon-Col1 table #td1
+    {
+        width:35%;
+    }
+    #BoChon-Row1 #BoChon-Col1 table #td2
+    {
+        width:65%;
+    }
+    
+    #BoChon-Row1 #BoChon-Col2
+    {
+        float:left;
+        width:24%;
+    }
+    #BoChon-Row1 #BoChon-Col2 table
+    {
+        width:60%;
+    }
+    #BoChon-Row1 #BoChon-Col3
+    {
+        float:left;
+        width:24%;
+    }
+    #BoChon-Row1 #BoChon-Col3 table td
+    {
+        width:20%;
+    }
+    #BoChon-Row1 #BoChon-Col4
+    {
+        float:left;
+        width:24%;
+    }
+    #BoChon-Row1 #BoChon-Col4 table
+    {
+        width:80%;
+    }
+    #BoChon-Row1 #BoChon-Col4 table td
+    {
+        width:20%;
+    }
+    .div-FaceSize
+    {
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            width:50px;
+            height:50px;
+            border:1px solid  rgb(192, 189, 189);
+            display: inline-block;
+            padding-top:11px;
+    }
+    .div-img-color
+    {
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            width:50px;
+            height:50px;
+            border:1px solid rgb(192, 189, 189);
+            display: inline-block;
+            padding:4px;
+    }
+    .div-img-day
+    {
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            width:61px;
+            height:61px;
+            border:1px solid  rgb(192, 189, 189);
+            display: inline-block;
+    }
+    .img-color
+    {
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+            width:40px;
+            height:40px;
+    }
+    .img-day
+    {
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        width:60px;
+        height:60px;
+    }
+    .clock-Colection
+    {
+        width:80px;
+        height:92px;
+    }
+    /* end!!*/
+    /* css cho thông báo khi chọn các bộ chọn trong fliter*/
+    #Strap
+    {
+        background-color:black;
+        color:white;
+        width:80px;
+        height: 40px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+
+    #Colors
+    {
+        background-color:black;
+        color:white;
+        width:80px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+    #Case-size
+    {
+        background-color:black;
+        color:white;
+        width:60px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+    .close
+    {
+        margin-left:20px;
+    }
+    
+    /*end*/
+    @media screen and  (max-width: 768px){
+        /* Css cho các bộ chọn trong filer */
+        .div-FaceSize
+        {
+                border-radius:50%;
+                -moz-border-radius:50%;
+                -webkit-border-radius:50%;
+                width:6vw;
+                height:6vw;
+                border:1px solid  rgb(192, 189, 189);
+                display: inline-block;
+                padding-top:7px;
+        }
+        .div-img-color
+        {
+                border-radius:50%;
+                -moz-border-radius:50%;
+                -webkit-border-radius:50%;
+                width:6vw;
+                height:6vw;
+                border:1px solid rgb(192, 189, 189);
+                display: inline-block;
+                padding:2px;
+        }
+        .div-img-day
+        {
+                border-radius:50%;
+                -moz-border-radius:50%;
+                -webkit-border-radius:50%;
+                width:7vw;
+                height:7vw;
+                border:1px solid  rgb(192, 189, 189);
+                display: inline-block;
+        }
+        .img-color
+        {
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+                width:5vw;
+                height:5vw;
+        }
+        .img-day
+        {
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            width:7vw;
+            height:7vw;
+        }
+        .clock-Colection
+        {
+            width:8vw;
+            height:10vw;
+        }
+    /* end!!*/
+    /* css cho thông báo khi chọn các bộ chọn trong fliter*/
+    #Strap
+    {
+        background-color:black;
+        color:white;
+        width:80px;
+        height: 40px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+
+    #Colors
+    {
+        background-color:black;
+        color:white;
+        width:80px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+    #Case-size
+    {
+        background-color:black;
+        color:white;
+        width:60px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+    .close
+    {
+        margin-left:20px;
+    }
+    
+    
+    }
+    /* css Cho sản phẩm */
+    .Show-FvIcon
+        {
+            background-color: red;
+            color:white;
+        }
+    .img-responsive
+        {
+            height:80%;
+            height:var(--width);
+            /* width:54%; */
+            
+        }
+    .product-bottom
+        {
+            margin:15px;
+        }
+    .item_price
+        {
+            margin-top:15px;
+            margin-bottom: 10px;
+        }
+        
+    .Sale-Product{
+        position:relative;
+        width:100%;
+        height:430px;
+    }
+    .Normal-Product{
+        position:relative;
+        width:100%;
+        height:430px;
+    }
+    @media screen and (min-width:670px) and  (max-width: 768px){
+        .Sale-Product{
+            position:relative;
+            height:410px;
+            width:100%;
+        }
+        .Normal-Product{
+            position:relative;
+            width:100%;
+            height:410px;
+
+        }
+    
+    }
+    @media screen and  (max-width: 670px){
+        .Sale-Product{
+            position:relative;
+            height:360px;
+            width:100%;
+        }
+        .Normal-Product{
+            position:relative;
+            width:100%;
+            height:360px;
+
+        }
+    
+    }
+    @media screen and (max-width: 567px){
+        .Sale-Product{
+            position:relative;
+            height:300px;
+            width:100%;
+        }
+        .Normal-Product{
+            position:relative;
+            width:100%;
+            height:280px;
+
+        }
+    }
+    @media screen and (max-width: 400px){
+        .Sale-Product{
+            position:relative;
+            height:230px;
+            width:100%;
+        }
+        .Normal-Product{
+            position:relative;
+            width:100%;
+            height:230px;
+
+        }
+    }
+   
+    a
+    {
+        text-decoration: none;
+        color:black;
+    }
+    a:hover
+    {
+        text-decoration: underline;
+    }
+    a:visited{
+        text-decoration: underline;
+        cursor: default;
+    } 
+    .title-BoChon
+    {
+        padding-bottom:20px;
+    }
+    
+
+   

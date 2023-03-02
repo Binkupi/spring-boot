@@ -1,0 +1,160 @@
+
+html
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+}
+
+/*Header start*/
+
+/*Body__SignUpForNewInfo-end*/
+
+.product-bottom
+{
+    margin:15px;
+}
+.item_price
+{
+    margin-top:15px;
+    margin-bottom: 10px;
+}
+
+.Sale-Product{
+    position:relative;
+    width:100%;
+    height:430px;
+}
+.Normal-Product{
+    position:relative;
+    width:100%;
+    height:430px;
+}
+.Discount
+{
+    width:60px;
+    height:35px;
+    position:absolute;
+    border-radius: 4px;
+    background-color:rgb(156, 4, 4);
+    color:white;
+    font-weight: 700;
+    left:20px;top: 20px;
+    line-height: 35px;
+}
+
+.FvIcon
+    {
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:30px;
+    height:30px;
+    position:absolute;
+    right:20px ;
+    top: 20px;
+    display:none;
+    border:1px solid  rgb(192, 189, 189);
+    padding-top:5px;
+    color: rgb(136, 128, 128);
+    background-color: white;
+    cursor: pointer;
+
+    }
+    @media only screen and (max-width: 768px) {
+        #Container{
+            font-size:2vw;
+        }
+        /* .Button-Buy{
+            margin-top:5px;
+            padding-top:5px;
+            padding-left:5px;
+            width:80%;
+            height:auto;
+            text-transform: uppercase;
+            color:white;
+            background-color:black;
+            border: none;
+            display:none;
+            margin-bottom:10px;
+        
+        
+        } */
+        .Discount
+        {   
+            padding:5px;
+            width:20%;
+            height:auto;    
+            position:absolute;
+            border-radius: 4px;
+            background-color:rgb(156, 4, 4);
+            color:white;
+            font-weight: 700;
+            left:15px;top: 15px;
+            line-height: 15px;
+        }
+     } 
+.Show-FvIcon
+{
+    background-color: red;
+    color:white;
+}
+.img-responsive
+    {
+        
+        width: 80%;
+        height:var(--width);
+    }
+    
+.Button-Buy{
+    margin-top:20px;
+    width:80%;
+    height:40px;
+    display:none;
+    text-transform: uppercase;
+    color:white;
+    background-color:black;
+    border: none;
+
+
+}
+.Button-Buy > span {
+    margin-left:10px;
+
+
+}
+.Button-Buy:focus
+{
+    outline: none;
+    border:0px;
+}
+
+.Product-Hover
+{
+    box-shadow: -10px 0 10px -10px #333, 10px 0 10px -10px #333;
+}
+.Button-Buy-Responsive{
+    background-color:#00ad5f;
+    color:white;
+}
+.MenBestSellers + a, .WomenBestSellers + a
+{
+    text-decoration: none;
+    color:black;
+}
+.MenBestSellers + a:hover, .WomenBestSellers + a:hover
+{
+    text-decoration: underline;
+}
+.MenBestSellers + a:visited, .WomenBestSellers + a:visited
+{
+    text-decoration: underline;
+    cursor: default;
+}
+.text
+{
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+/*Body end*/
+

@@ -1,0 +1,70 @@
+/* chia cột cho sản phẩm */
+
+#Product_information
+{
+    margin-top: 5%;
+}
+
+#Product_information .MenBestSellers, #Product_information .WomenBestSellers
+{
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 00.02em;
+    word-spacing: 0.02em;
+    padding-bottom: 8px;
+}
+
+#Product_information .f-grid {
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -1rem;
+    flex-flow: row wrap;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+#Product_information .f-grid-col {
+    flex: 1 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height:auto;
+}
+/* end!!! */
+
+/* Chia cột cho Bộ sưu tập */
+#Collection .f-grid {
+    width: 90%;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -1rem;
+    flex-flow: row wrap;
+}
+#Collection .f-grid-col {
+    flex: 1 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height:auto;
+}
+/* End!!! */
+/* Chia cột cho slogan*/
+#slogan .f-grid {
+    width:100%;
+    
+    display: flex;
+    justify-content: space-between;
+    margin-left: -1rem;
+    flex-flow: row wrap;
+    margin-left: -1rem;
+    
+}
+#slogan .f-grid .f-grid-col {
+    flex: 1 0;
+    margin-left: 1rem;
+
+    padding-top:17px;
+
+}
+/* end!!! */
+

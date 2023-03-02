@@ -1,0 +1,39 @@
+#Menu-Filter ul {
+    width: 250px;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+  }
+  #Menu-Filter li {
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #807d7d11;
+    padding: 0 1em;
+  }
+  #Menu-Filter li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+  }
+  #Menu-Filter li:hover {
+    background: #CDE2CD;
+  }
+  #Menu-Filter ul li {
+    position: relative;
+   }
+   #Menu-Filter .sub-menu {
+    position: absolute;
+    left: 250px;
+    top: 0;
+   }
+   #Menu-Filter .sub-menu {
+    position: absolute;
+    left: 250px;
+    top: 0;
+    display: none;
+   }
+   #Menu-Filter li:hover .sub-menu {
+    display: block;
+   }

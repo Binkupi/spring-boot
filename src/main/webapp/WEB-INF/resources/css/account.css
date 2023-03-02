@@ -1,0 +1,259 @@
+/* account-login-starts */
+*{
+    margin: 0;
+    padding: 0;
+}
+.account{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+.login{
+    width: 80%;
+    margin: 0 auto;
+    color: #222;
+    background: none;
+    padding: 8px 10px;
+    outline: none;
+    font-family: 'Lato-Regular';
+    font-size: 16px;
+}
+.login h3{
+    margin-bottom:15px ;
+}
+.login input{
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    color: #000;
+    background: none;
+    padding: 8px 10px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-family: 'Lato-Regular';
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 40px;
+}
+.login input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+}
+
+.flex_container{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+}
+.account_heading h2{
+    font-size: 30px;;
+    color: #222;
+    margin: 0 auto;
+    font-size: 40px;
+}
+.account_heading{
+    text-align: center;
+}
+.account_main{
+    margin-top: 4%;
+}
+.margin_up{
+    margin-top: 5px;
+}
+.col_2{
+    margin-left: 20px;
+}
+
+.account_left{
+    width: 80%;
+    margin: 0 auto;
+    color: #222;
+    background: none;
+    padding: 8px 10px;
+    outline: none;
+    font-family: 'Lato-Regular';
+    font-size: 16px;
+}
+.account_new{
+    width: 80%;
+    color: #222;
+    background: none;
+    margin-top:65px;
+    padding: 8px 10px;
+    outline: none;
+    font-family: 'Lato-Regular';
+    font-size: 16px;
+}
+.account_new p{
+    margin: 20px 0 20px 0;
+    font-size: 18px;
+    line-height: 25px; 
+    color: #999;
+}
+.account h3{
+    font-size: 30px;;
+    color: rgb(53, 45, 45);
+}
+.account_left p{
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 25px; 
+    color: #999;
+}
+.account_left input{
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    color: #000;
+    background: none;
+    padding: 8px 10px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-family: 'Lato-Regular';
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 40px;
+}
+
+.account_father_button{
+    width:40%;
+    margin: 0 auto;
+}
+.div_btn_new_acc{
+    width: 40%;
+}
+.account_button{
+    background: #333;
+    color: rgb(228, 220, 220);
+    outline: none;
+    width: 100%;
+    height: 37px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    border-color: none;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.account_button_new{
+    background: white;
+    color: #333;
+    outline: none;
+    width: 100%;
+    height: 37px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    border-color: none;
+    cursor: pointer;
+    margin: 0 auto;
+}
+button.account_button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    cursor:pointer;
+}
+button.account_button_new:hover{
+    color: white;
+    background-color: #333;
+    border: 1px solid black;
+    cursor:pointer;
+}
+.account_father_forgot{
+    width:60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
+}
+.account_father_forgot a{
+    color: #777;
+    font-size: 16px;
+    margin-top: 55px;
+    padding: 10px;
+}
+.account_father_forgot a:hover{
+    color: rgb(9, 176, 231);
+    font-size: 16px;
+    margin-top: 55px;
+    padding: 10px;
+}
+
+
+.account_shadow{
+    display: grid;
+    gap: 20px;
+    justify-items: stretch;
+    padding: 16px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.1);
+}
+/* account-login-end */
+/*account-register-start*/
+.register{
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 20px;
+}
+.register_heading h2{
+    color: #333;
+}
+.register_main{
+    margin: 0 auto;
+    width: 70%;
+}
+.div_btn_register{
+    width: 50%;
+    margin: 0 auto;
+    height:40px;
+}
+
+.gentle_register{
+    width: 100%;
+    margin: 5px;
+}
+
+.gentle_register ul{
+    list-style-type: none;
+}
+.gentle_register li{
+    display: inline;
+    font-size: 20px;
+}
+.gentle_register input{
+    width: 10%;
+}
+.submit_register{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.gentle_register input[type=radio] {
+    border: 0px;
+    width: 8%;
+    height: 20px;
+}
+/*account-register-start*/
+
+/* css-jquery_start */
+#message_email{
+    color: red;
+}
+#message_password{
+    color: red;
+}
+
+.account_register_content p{
+    color: red;
+}
+
+input:hover{
+    border: 1px solid #00ad5f;
+}
+input:focus
+{
+    border: 1px solid #00ad5f;
+}

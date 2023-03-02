@@ -1,0 +1,281 @@
+ /* responsive */
+.grid__new {
+    width: 1248px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__new_grow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__col-info {
+    width: 74.038%;
+    background-color: #fff;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.grid__col-same-category {
+    width: 25.961%;
+    background-color: #fff;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.divide {
+    height: 52px;
+    background-color: #e5e5e5;
+    /*margin-top: 3px;*/
+    margin-bottom: -120px;
+    
+}
+
+/* breadcrumbs */
+
+.breadcrumbs {
+    margin: 20px 0;
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs a:hover {
+    color: #207bc1;
+}
+
+.breadcrumbs li{
+    list-style: none;
+    display: inline-block;
+}
+
+.breadcrumbs li a {
+    text-decoration: none;
+    padding: 0 5px;
+    color: #333;
+}
+
+.breadcrumbs-icon {
+    font-size: 13px;
+    color: #333;
+}
+
+/* article__container */
+#NewContainer {
+    background-color: #e5e5e5;
+}
+
+.title {
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #277bc1;
+}
+
+.sapo {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 22px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+.content-text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 2px;
+}
+.content-text a{
+    text-decoration: none;
+    color:black;
+    font-weight: 900;
+}
+.content-text strong {
+    padding: 5px 0;
+    display: inline-block;
+}
+
+.content_picture {
+    text-align: center;
+}
+
+.content-picture-item-sub {
+    text-align: center;
+}
+
+.content-picture-item {
+    width: 500px;
+    margin: 0 145px;
+    padding-top: 5px;
+}
+
+/* grid__col-same-category */
+
+.grid__col-same-category {
+    padding-top: 50px;
+}  
+
+.article__sidebar-title {
+    background: #eee none;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    border-top: 2px solid #ff6535;
+    padding: 11px 16px 10px;
+    display: block;
+    margin: 0;
+}
+
+.article__sidebar-list {
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.article__sidebar-item {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.article__sidebar-item-link {
+    text-decoration: none;
+}
+
+.article__sidebar-item-link:hover h3 {
+    color: #207bc1;
+}
+
+.article__sidebar-img {
+    width: 76px;
+    height: 60px;
+    float: left;
+    margin: 0 16px 0 0;
+    position: relative;
+    line-height: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.article__sidebar-img-child {
+    width: 100%;
+    height: 100%;
+}
+
+.article__sidebar-img-sub {
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* BEGIN: Top dong ho nam nu ban chay gia chua den 5 trieu */
+
+.big_title {
+    font-size: 30px;
+}
+
+.list__watch-info {
+    padding: 0;
+    list-style-type: none;
+}
+
+.name__watch-center-link {
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+.watch__item-infor {
+    list-style-type: none;
+    padding: 30px 20px;
+
+}
+
+.name__watch-center {
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    width:40%;
+}
+
+.name-watch {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.watch__item-infor-cossbar {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid rgb(235, 235, 235);
+    width: 30%;
+}
+
+.watch__item-content {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.content-text-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content-text-link:hover  {
+    text-decoration: underline;
+}
+.content-text-watch-info {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.watch__item-content-item {
+    width: 33.333%;
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+.watch__item-content-item:hover .watch__item-content-item-img  {
+    transform: scale(1.05);
+}
+
+.watch__item-content-item-img {
+    width: 100%;
+}
+
+.buy__now {
+    display: inline-block;
+    width: 100%;
+}
+
+.buy__now-link {
+  
+  width: 190px;
+  display: block;
+  margin: 0 auto;
+}
+
+.buy__now-link:hover .buy__now-img {
+    transform: scale(1.05);
+}
+
+.advertise__list {
+
+}
+
+.advertise__list-item {
+    margin-left: 10px;
+    
+}
+
+/* END: Top dong ho nam nu ban chay gia chua den 5 trieu */

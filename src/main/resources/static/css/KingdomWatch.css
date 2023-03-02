@@ -1,0 +1,1554 @@
+/* "KINGDOM WATCH" */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+}
+
+/* "HEADER" */
+
+header
+{
+    position: relative;
+    width: 100%;
+}
+
+nav /* Navigation Bar*/
+{
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2%;
+    background-color: #fbfbfb;
+    z-index: 100;
+    outline: 1px solid lightgrey;
+}
+
+div.PseudoNav
+{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    padding: 0 2%;
+}
+
+#Logo
+{
+    width: 10%;
+    height: 15%;
+    top: 0;
+    left: 3%;
+    position: fixed;
+}
+
+a#Logo img
+{
+    height: 100%;
+    width: 100%;
+}
+
+div.NavElement, a.NavElement, p.NavElement
+{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+p.NavElement
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.NavElement img
+{
+    height: 30%;
+}
+
+.NavElement p, .NavElement img
+{
+    margin: auto;
+}
+
+.NavElement p
+{
+    font-size: 120%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.NavElement .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.NavElement .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+.NavElement .dropdown-content a:hover {
+    background-color: lightgray;
+}
+
+.NavElement:hover .dropdown-content {
+    display: block;
+}
+
+#Cart sup
+{
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    color: white;
+    background-color: black;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    transform: translateY(-50%);
+}
+
+#MainNavElement
+{
+    color: #d22630;
+    text-decoration: none;
+
+}
+#underline_none{
+    text-decoration: none;
+}
+
+
+#TransparentGlass /*Use for Cart Content and Search Content*/
+{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.StopScrolling
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+#CartContent /*Cart Content*/
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    z-index: 102;
+    display: none;
+}
+
+#CartTitle
+{
+    position: relative;
+    height: 15%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#CartTitle p
+{
+    text-transform: uppercase;
+    font-size: 133%;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 2px;
+}
+
+#CartTitle img
+{
+    height: 16%;
+    cursor: pointer;
+}
+
+#CartProduct
+{
+    height: 35%;
+    width: 80%;
+    margin-left: 10%;
+    overflow: auto;
+}
+
+#CartProduct .CartProductElement
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 66.67%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#CartProduct .CartProductElement > img:first-child
+{
+    height: 75%;
+}
+
+#CartProduct .CartProductElement .CartProductElementPrice
+{
+    height: 50%;
+    width: 70%;
+}
+
+#CartProduct .CartProductElement .CartProductElementPrice > p:first-child
+{
+    font-size: 110%;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    color: rgba(0, 0, 0, 0.5);
+    height: 60%;
+}
+
+.NumberOfElementPriceContainer
+{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.NumberOfCartProductElement
+{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2%;
+}
+
+.NumberOfCartProductElement p
+{
+    line-height: 100%;
+}
+
+#ArrowOfCartProductElement
+{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ArrowOfCartProductElement img
+{
+    display: block;
+    margin: auto;
+    width: 75%;
+}
+
+.DecreaseElementButton
+{
+    opacity: 0.5;
+}
+
+.NumberOfElementPriceContainer > p
+{
+    font-size: 120%;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-left: 3%;
+}
+
+.TrashButton
+{
+    cursor: pointer;
+}
+
+.CancelCartProduct
+{
+    position: absolute;
+    top: 0;
+    z-index: 103;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.02em;
+    display: none;
+}
+
+.CancelCartProduct > p:first-child
+{
+    text-align: center;
+    padding-top: 8%;
+}
+
+.CancelCartProduct > div
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 22%;
+    margin-left: 15%;
+    margin-top: 8%;
+}
+
+.CancelCartProduct > div > p:first-child
+{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 95%;
+    transition: all 0.7s;
+}
+
+.CancelCartProduct > div > p:first-child:hover, .CancelCartProduct > div > p:first-child:active
+{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.CancelCartProduct > div div
+{
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 95%;
+    transition: all 0.7s;
+}
+
+.CancelCartProduct > div div p:hover, .CancelCartProduct > div div p:active
+{
+    border-bottom: 1px solid black;
+}
+
+#ShippingTimeCart
+{
+    height: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 1%;
+}
+
+#ShippingTimeCart p
+{
+    text-align: center;
+    font-size: 110%;
+    color: #3BB100;
+}
+
+#PriceCart
+{
+    height: 18%;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#PriceCart p:first-child
+{
+    text-transform: uppercase;
+    font-size: 110%;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+#ValueOfPriceCart
+{
+    font-weight: bolder;
+    font-size: 140%;
+}
+
+#PurchaseButton
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 80%;
+    height: 8%;
+    color: white;
+    font-weight: 500;
+    background-color: black;
+    margin-left: 10%;
+    border: 0;
+    transition: all 0.5s;
+}
+
+#PurchaseButton:hover, #PurchaseButton:active
+{
+    background-color: #00ad5f;
+}
+
+div#PolicyCart
+{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 3%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+div.PolicyCartColumn
+{
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.PolicyCartColumn p
+{
+    font-size: 80%;
+    letter-spacing: 0.02em;
+}
+
+div#NoProductInCart
+{
+    position: absolute;
+    top: 15%;
+    width: 90%;
+    height: 71%;
+    margin-left: 5%;
+    background-color: white;
+}
+
+#NoProductInCart h3
+{
+    text-align: center;
+    margin-top: 40%;
+    font-size: 140%;
+    font-weight: 400;
+}
+
+#NoProductInCart p
+{
+    width: 35%;
+    height: 9%;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+#NoProductInCart p:hover
+{
+    background-color: #007378;
+}
+
+#SearchContent /*Search Content*/
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    z-index: 102;
+    display: none;
+    
+}
+
+#SearchContent > div:first-child
+{
+    height: 16%;
+    display: flex;
+    align-items: center;
+}
+
+#SearchContent > div:first-child img
+{
+    height: 15%;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+#SearchContent > div:nth-child(2)
+{
+    height: 11%;
+    background-color: #f5f5f5;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+#SearchContent > div:nth-child(2) img
+{
+    height: 25%;
+}
+
+#SearchContent > div:nth-child(2) input
+{
+    height: 100%;
+    width: 85%;
+    margin-left: 2%;
+    border: none;
+    background-color: #f5f5f5;
+    padding-left: 1%;
+    font-size: 120%;
+    letter-spacing: 0.05em;
+}
+
+#SearchContent > div:nth-child(2) input:focus
+{
+    outline:none;
+}
+
+div#Banner /* Banner_main */
+{
+    height: 85vh;
+    background-image: url(../images/CTSP/bnr-3.jpg);
+    position: relative;
+}
+div#BannerDH_Nam /* Banner DH_Nam */
+{
+    height: 43vh;
+    background-image: url(../images/DH_Nam/Baner_DH_Nam.png);
+    position: relative;
+}
+div#BannerDH_Nu /* Banner DH_Nu */
+{
+    height: 43vh;
+    background-image: url(../images/DH_Nu/Banner_DH_Nu.png);
+    position: relative;
+}
+div#Banner_CTSP /* Banner DH_Nu */
+{
+    height: 85vh;
+    background-image: url(../images/CTSP/BannerCTSP.png);
+    position: relative;
+}
+div#Banner_Contact /* Banner DH_Nu */
+{
+    height: 80vh;
+    background-image: url(../images/BannerContact.png);
+    position: relative;
+}
+
+div#BannerContent
+{
+    width: 50%;
+    margin: 0;
+    padding-top: 3%;
+    padding-left: 2%;
+}
+
+div#BannerContent h1, div#BannerContent h2
+{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3%;
+}
+
+div#BannerContent h1
+{
+    text-transform: uppercase;
+}
+
+a#ShoppingButton
+{
+    display: block;
+    border: 1px solid white;
+    margin: 3% auto;
+    width: fit-content;
+    text-align: center;
+    padding: 2% 5%;
+    transition: all 1s;
+    text-decoration: none;
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#ShoppingButton:hover, #ShoppingButton:active
+{
+    background-color: white;
+    color: #660000;
+}
+
+#WatchContent /* Watch Content */
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center; 
+    width: 100%;
+    height: 24%;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    background-color: #fbfbfb;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+    z-index: 100;
+    display: none;
+}
+
+#WatchContent a
+{
+    width: 10%;
+    height: 50%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid lightgrey;
+}
+
+#WatchContent a img
+{
+    display: block;
+    width: 85%;
+    height: 85%;
+}
+
+                                        /* -----TRANG CHá»¦----- */
+
+/* "Ä�á»’NG Há»’ NAM, Ä�á»’NG Há»’ Ná»®" */
+
+#MenAndWomen
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    padding-top: 3%;
+    margin: 0 auto;
+    position: relative;
+}
+
+div.Column
+{
+    width: 48%;
+    position: relative;
+}
+
+#MenAndWomen .Content
+{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+}
+
+#MenAndWomen img.ManWomanImg
+{
+    width: 100%;
+}
+
+#MenAndWomen a.ManWoman
+{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 140%;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+#MenAndWomen a.BuyNow
+{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.Column img.RightArrow
+{
+    width: 7%;
+    margin-left: 2%;
+}
+
+section#NewInformation
+{
+    width: 100%;
+    padding-top: 10%;
+    margin-bottom:20px;
+}
+
+/* "Ä�Ä‚NG KÃ� NHáº¬N TIN Má»šI" */
+
+#NewInformation h2
+{
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    padding-top: 0;
+}
+
+#NewInformation > p
+{
+    letter-spacing: 00.02em;
+    text-align: center;
+    font-size: 120%;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 0.5%;
+}
+
+div#NewInfoInput
+{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: auto;
+    padding-top: 1%;
+}
+
+.NewInfoInputElement
+{
+    width: 31%;
+}
+
+input.NewInfoInputElement
+{
+    border: 1px solid black;
+    height: 50px;
+    padding: 1%;
+}
+
+input.NewInfoInputElement:focus
+{
+    outline: 0;
+}
+
+div.NewInfoInputElement
+{
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+    font-size: 120%;
+    transition: all 1s;
+    padding: 0;
+    display: flex;
+    cursor: pointer;
+}
+
+div.NewInfoInputElement p
+{
+    margin: auto;
+}
+
+div.NewInfoInputElement:hover, div.NewInfoInputElement:active
+{
+    background-color: #00ad5f;
+}
+
+                                        /* -----LIÃŠN Há»†----- */
+#Contact
+{
+    width: 82%;
+    margin-left: 9%;
+    margin-top: 5%;
+    display: flex;
+    height: 130vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+}
+
+#BackgroundContact /* BackgroundContact */
+{
+    width: 50%;
+    background-image: url(../Image/Contact/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+#BackgroundContactPlate
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 98;
+}
+
+#BackgroundContactContent
+{
+    width: 70%;
+    height: 36%;
+    margin-left: 10%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.BackgroundContactContentElement
+{
+    width: 100%;
+    letter-spacing: 00.03em;
+}
+
+.BackgroundContactContentElement > div
+{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 120%;
+}
+
+.BackgroundContactContentElement > div img
+{
+    width: 5%;
+    margin-right: 4%;
+}
+
+.BackgroundContactContentElement > p
+{
+    margin-top: 2%;
+    margin-left: 9%;
+}
+
+#ContactForm /* ContactForm */
+{
+    width: 50%;
+    padding-top: 5%;
+    background-color: white;
+}
+
+#ContactForm > h2
+{
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    word-spacing: 0.02em;
+}
+
+#ContactFormInputContainer
+{
+    width: 84%;
+    height: 70%;
+    margin-left: 8%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#ContactFormInputContainer > div
+{
+    position: relative;
+}
+
+#ContactFormInputContainer > div:not(:nth-child(4))
+{
+    width: 100%;
+    height: 18.2%;
+}
+
+#ContactFormInputContainer > div:nth-child(4)
+{
+    width: 100%;
+    height: 36.4%;
+}
+
+.ContactFormLabel, .ContactFormInput
+{
+    display: flex;
+    align-items: center;
+    padding-left: 4%;
+    letter-spacing: 0.03em;
+    word-spacing: 0.03em;
+    font-size: 115%;
+    background-color: white;
+}
+
+#ContactFormInputContainer > div:not(:nth-child(4)) .ContactFormLabel, #ContactFormInputContainer > div:not(:nth-child(4)) .ContactFormInput
+{
+    width: 100%;
+    height: 50%;
+}
+
+#ContactFormInputContainer > div:nth-child(4) .ContactFormLabel
+{
+    width: 100%;
+    height: 25%;
+}
+
+#ContactFormInputContainer > div:nth-child(4) .ContactFormInput
+{
+    width: 100%;
+    height: 75%;
+}
+
+.ContactFormInput
+{
+   border: 1px solid black;
+   border-radius: 7px;
+}
+
+.ContactFormInput::placeholder
+{
+    color: #ff0f0f;
+}
+
+.ContactFormInput:focus
+{
+    outline: 0;
+    border: 1px solid #00ad5f;
+    box-shadow: 0px 2px 2px 0px #00ad5f;
+}
+
+textarea.ContactFormInput
+{
+    padding-top: 3%;
+}
+
+#ContactForm > button
+{
+    display: block;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 7%;
+    background-color: #00ad5f;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    word-spacing: 0.02em;
+    color: white;
+    font-size: 110%;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 7px;
+}
+
+#ContactForm > button:focus
+{
+    outline: 0;
+}
+
+#ContactForm > button:hover, #ContactForm > button:active
+{
+    background-color: #333333;
+}
+
+#ContactFormInputContainer > div
+{
+    position: relative;
+}
+
+#ContactFormNameError
+{
+    position: absolute;
+    top: 57%;
+    left: 100%;
+    width: 36%;
+    height: 36%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ff0f0f;
+}
+
+#ContactFormMailError
+{
+    position: absolute;
+    top: 57%;
+    left: 100%;
+    width: 39.5%;
+    height: 36%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ff0f0f;
+}
+
+#ContactFormPhoneError
+{
+    position: absolute;
+    top: 57%;
+    left: 100%;
+    width: 51%;
+    height: 36%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ff0f0f;
+}
+
+#ContactFormNoticeError
+{
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    width: 45%;
+    height: 18%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ff0f0f;
+}
+
+.ContactFormError img
+{
+    width: 10%;
+    height: 50%;
+}
+
+#ContactNotice
+{
+    text-align: center;
+    color: #ff0f0f;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    word-spacing: 0.02em;
+    margin-top: 3%;
+    display: none;
+}
+
+                                        /* -----FOOTER----- */
+#Footer
+{
+    background-color: lightgrey;
+    width: 100%;
+    height: 40vh;
+    margin-top: 5%;
+    display: flex;
+}
+
+#Footer .FooterColumnContent
+{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+#Footer .FooterColumn
+{
+    width: 25%;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.FooterColumn .FooterColumnContent > div
+{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+
+#Footer .FooterColumn p, #Footer .FooterColumn a
+{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#Footer .FooterColumn p:hover, #Footer .FooterColumn a:hover
+{
+    color: #ec7a1c;
+}
+
+#Footer h3
+{
+    text-transform: uppercase;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+#Footer img.Icon
+{
+    width: 5%;
+}
+
+.FooterColumn:nth-child(3) a
+{
+    display: flex;
+    align-items: center;
+}
+
+.FooterColumn:nth-child(3) a img
+{
+    width: 10%;
+    margin-right: 3%;
+}
+
+.FooterColumn .PaymentIcon
+{
+    width: 30%;
+}
+
+.FooterColumn .FooterPayment
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 5%;
+    width: 90%;
+}
+
+.FooterColumn .PaymentIcon
+{
+    width: 30%;
+    height: 40%;
+}
+
+#Footer a
+{
+    color: inherit;
+}
+
+                                        /* -----THANH TOÃ�N----- */
+div#Payment
+{
+    width: 80%;
+    height: 80vh;
+    
+    margin-top: 3%;
+    
+    justify-content: space-between;
+}
+
+div#PaymentLeftColumn
+{
+    width: 100%;
+    height: 100%;
+}
+
+div#PaymentRightColumn
+{
+    width: 40%;
+    height: 75%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7)
+}
+
+#PaymentLeftColumn > h3
+{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+}
+
+#PaymentLeftColumn > p:first-of-type
+{
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+#PaymentLeftColumn span
+{
+    color: #00ad5f;
+    font-weight: bold;
+}
+
+#PaymentLeftColumn > input
+{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 2%;
+    padding-left: 2%;
+    font-size: 105%;
+    letter-spacing: 0.06em;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+}
+
+#PaymentLeftColumn > input::placeholder
+{
+    font-size: 105%;
+    letter-spacing: 0.06em;
+}
+
+#PaymentLeftColumn > input:focus
+{
+    outline: 0;
+    border: 1px solid #00ad5f;
+    box-shadow: 0px 2px 2px 0px #00ad5f;
+}
+
+#PaymentLeftColumn > label
+{
+    display: block;
+    margin-top: 2%;
+    padding-left: 2%;
+    font-size: 105%;
+    letter-spacing: 0.06em;
+}
+
+#PaymentLeftColumn > select
+{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 2%;
+    padding-left: 1.4%;
+    font-size: 105%;
+    letter-spacing: 0.06em;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+}
+
+#PaymentLeftColumn > select:focus
+{
+    outline: 0;
+    border: 1px solid #00ad5f;
+    box-shadow: 0px 2px 2px 0px #00ad5f;
+}
+
+#PaymentLeftColumn > button
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    background-color: #00ad5f;
+    width: 75%;
+    height: 50px;
+    border: 0;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    word-spacing: 0.05em;
+    font-size: 102%;
+    border-radius: 7px;
+}
+
+#PaymentLeftColumn > button:focus
+{
+    outline: 0;
+}
+
+#PaymentLeftColumn > button:hover
+{
+    background-color: #333333;
+}
+
+#PaymentLeftColumn > h4
+{
+    margin-top: 3%;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid lightgray;
+}
+
+#PaymentRightColumn .Title
+{
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+}
+
+#PaymentRightColumn .Title > h3
+{
+    text-transform: uppercase;
+}
+
+#PaymentRightColumn .Product
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    font-size: 110%;
+}
+
+#PaymentRightColumn .Product > img
+{
+    height: 90%;
+}
+
+#PaymentRightColumn .Product > p
+{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#PaymentRightColumn .SaleCode
+{
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#PaymentRightColumn .SaleCode input
+{
+    width: 70%;
+    height: 50%;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 95%;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+}
+
+#PaymentRightColumn .SaleCode input:focus
+{
+    outline: 0;
+    border: 1px solid #00ad5f;
+    box-shadow: 0px 2px 2px 0px #00ad5f;
+}
+
+#PaymentRightColumn .SaleCode button 
+{
+    width: 25%;
+    height: 50%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: #00ad5f;
+    outline: 0;
+    border: 0;
+    border-radius: 7px;
+}
+
+#PaymentRightColumn .SaleCode button:hover
+{
+    background-color: #333333;
+}
+
+#PaymentRightColumn .TotalPrice
+{
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#PaymentRightColumn .TotalPrice > p
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 110%;
+}
+
+.PaymentError::placeholder
+{
+    color: #ff0f0f;
+}
+
+#Payment button
+{
+    cursor: pointer;
+}
+
+                                        /* -----THÃ”NG TIN LIÃŠN Há»†----- */
+section.StoreAddress{
+    margin-top: 3rem;
+}
+
+section.StoreAddress > h4{
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.StoreAddress .StoreAddressCard{
+    margin-top: 1.5rem;
+    padding-left: 0;
+    height: 315px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid lightgray ;
+    border-bottom: 1px solid lightgray;
+}
+
+.StoreAddressNotFirst .StoreAddressCard{
+    padding-left: 0;
+    height: 315px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+section.StoreAddressCard > img{
+    width: 35%;
+    height: 90%;
+}
+
+section.StoreAddressCard p > span{
+    font-weight: bold;
+}
+
+section.WatchKingdomProps{
+    margin-top: 2rem;
+    padding: 0;
+}
+
+div.WatchKingdomPropsTitle{
+    width: 100%;
+    padding: 0;
+}
+
+div.WatchKingdomPropsTitle > h4{
+    text-align: center;
+    font-weight: bolder;
+}
+
+div.WatchKingdomPropsTitle > h4 + p{
+    text-align: center;
+}
+
+div.WatchKingdomPropsContainerCard{
+    margin-top: 1.5rem;
+}
+
+div.WatchKingdomPropsCard  img{
+    margin-right: 1rem;
+}
+
+div.WatchKingdomPropsCard > p:first-of-type{
+    font-weight: bold;
+}
+
+                                        /*-----NEWS-----*/
+#BackToTopBtn{
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    z-index: 1000;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#BackToTopBtn::after{
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#BackToTopBtn:hover, #BackToTopBtn:active{
+    background-color: black;
+}
+
+#BackToTopBtn.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.mainMenu a{
+    text-decoration: none;
+}
+                    
+.article__container{
+    line-height: 40px;
+}
+
+.content-text{
+    line-height: 35px;
+}
